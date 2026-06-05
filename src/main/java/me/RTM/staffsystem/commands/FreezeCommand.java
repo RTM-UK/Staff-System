@@ -1,6 +1,6 @@
-package me.yourname.staffsystem.commands;
+package me.yourname.RTM.commands;
 
-import me.yourname.staffsystem.managers.StaffManager;
+import me.RTM.staffsystem.managers.StaffManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
