@@ -39,10 +39,8 @@ public class FreezeCommand implements CommandExecutor {
 
         if (nowFrozen) {
 
-            // FREEZE MESSAGE TO STAFF
             staff.sendMessage("§b[Staff] §fYou have frozen §e" + target.getName() + "§f.");
 
-            // WARNING TITLE TO TARGET
             target.sendTitle(
                     "§cYOU ARE FROZEN",
                     "§7Do not log out",
