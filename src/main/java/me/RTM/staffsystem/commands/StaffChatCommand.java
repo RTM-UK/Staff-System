@@ -1,6 +1,6 @@
-package me.yourname.staffsystem.commands;
+package me.RTM.staffsystem.commands;
 
-import me.yourname.staffsystem.managers.StaffManager;
+import me.RTM.staffsystem.managers.StaffManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
@@ -23,7 +23,6 @@ public class StaffChatCommand implements CommandExecutor {
 
         if (!(sender instanceof Player p)) return true;
 
-        // must be staff
         if (!manager.isStaff(p)) {
             p.sendMessage("§cYou are not in staff mode.");
             return true;
@@ -31,7 +30,6 @@ public class StaffChatCommand implements CommandExecutor {
 
         UUID uuid = p.getUniqueId();
 
-        // TOGGLE MODE
         if (args.length == 1 &&
                 (args[0].equalsIgnoreCase("on") || args[0].equalsIgnoreCase("off"))) {
 
@@ -52,7 +50,6 @@ public class StaffChatCommand implements CommandExecutor {
             return true;
         }
 
-        // IF IN TOGGLE MODE
         if (staffChatEnabled.contains(uuid)) {
 
             String msg = String.join(" ", args);
@@ -66,7 +63,6 @@ public class StaffChatCommand implements CommandExecutor {
             return true;
         }
 
-        // NORMAL USAGE
         if (args.length == 0) {
             p.sendMessage("§cUsage: /sc <message> or /sc on|off");
             return true;
