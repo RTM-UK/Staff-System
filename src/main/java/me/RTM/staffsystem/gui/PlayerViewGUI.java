@@ -1,4 +1,4 @@
-package me.yourname.staffsystem.gui;
+package me.RTM.staffsystem.gui;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
