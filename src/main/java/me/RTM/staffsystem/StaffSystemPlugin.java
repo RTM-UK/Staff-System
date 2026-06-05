@@ -1,8 +1,8 @@
-package me.yourname.staffsystem;
+package me.RTM.staffsystem;
 
-import me.yourname.staffsystem.commands.*;
-import me.yourname.staffsystem.gui.*;
-import me.yourname.staffsystem.managers.StaffManager;
+import me.RTM.staffsystem.commands.*;
+import me.RTM.staffsystem.gui.*;
+import me.RTM.staffsystem.managers.StaffManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,13 +15,12 @@ public class StaffSystemPlugin extends JavaPlugin {
 
         staffManager = new StaffManager(this);
 
-        // EVENTS
+        
         Bukkit.getPluginManager().registerEvents(staffManager, this);
         Bukkit.getPluginManager().registerEvents(new GUIListener(), this);
         Bukkit.getPluginManager().registerEvents(new StaffBookListener(), this);
         Bukkit.getPluginManager().registerEvents(new VanishToggleListener(staffManager), this);
 
-        // COMMANDS
         getCommand("staff").setExecutor(new StaffCommand(staffManager));
         getCommand("vanish").setExecutor(new VanishCommand(staffManager));
         getCommand("freeze").setExecutor(new FreezeCommand(staffManager, this)); // IMPORTANT FIX
