@@ -1,4 +1,4 @@
-package me.yourname.staffsystem.gui;
+package me.RTM.staffsystem.gui;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -13,13 +13,11 @@ public class PlayerActionGUI {
         Inventory inv = Bukkit.createInventory(null, 27,
                 "§dInspect: " + target.getName());
 
-        // INVENTORY BUTTON
         ItemStack invItem = new ItemStack(Material.CHEST);
         ItemMeta invMeta = invItem.getItemMeta();
         invMeta.setDisplayName("§aView Inventory");
         invItem.setItemMeta(invMeta);
 
-        // ENDER CHEST BUTTON
         ItemStack ecItem = new ItemStack(Material.ENDER_CHEST);
         ItemMeta ecMeta = ecItem.getItemMeta();
         ecMeta.setDisplayName("§5View Ender Chest");
