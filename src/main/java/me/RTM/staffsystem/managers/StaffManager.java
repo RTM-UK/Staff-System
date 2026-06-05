@@ -1,4 +1,4 @@
-package me.yourname.staffsystem.managers;
+package me.RTM.staffsystem.managers;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;
@@ -24,7 +24,6 @@ public class StaffManager implements Listener {
         this.plugin = plugin;
     }
 
-    // ---------------- STAFF MODE ----------------
 
     public void toggleStaff(Player p) {
 
@@ -61,7 +60,6 @@ public class StaffManager implements Listener {
         return staff.contains(p.getUniqueId());
     }
 
-    // ---------------- VANISH ----------------
 
     public void setVanish(Player p, boolean v) {
 
@@ -87,7 +85,6 @@ public class StaffManager implements Listener {
         return vanished.contains(p.getUniqueId());
     }
 
-    // ---------------- FREEZE ----------------
 
     public void toggleFreeze(Player p) {
 
@@ -104,7 +101,6 @@ public class StaffManager implements Listener {
         return frozen.contains(p.getUniqueId());
     }
 
-    // ---------------- ITEMS ----------------
 
     public void giveStaffBook(Player p) {
 
@@ -129,7 +125,6 @@ public class StaffManager implements Listener {
         p.getInventory().addItem(item);
     }
 
-    // ---------------- EVENTS ----------------
 
     @EventHandler
     public void onMove(PlayerMoveEvent e) {
