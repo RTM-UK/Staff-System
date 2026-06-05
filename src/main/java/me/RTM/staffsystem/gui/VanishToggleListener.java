@@ -1,6 +1,6 @@
-package me.yourname.staffsystem.gui;
+package me.RTM.staffsystem.gui;
 
-import me.yourname.staffsystem.managers.StaffManager;
+import me.RTM.staffsystem.managers.StaffManager;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,7 +22,6 @@ public class VanishToggleListener implements Listener {
 
         Action action = e.getAction();
 
-        // only real right/left clicks
         if (action != Action.RIGHT_CLICK_AIR &&
                 action != Action.RIGHT_CLICK_BLOCK) return;
 
