@@ -1,4 +1,4 @@
-package me.yourname.staffsystem.gui;
+package me.RTM.staffsystem.gui;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -27,7 +27,6 @@ public class StaffBookListener implements Listener {
 
         Player p = e.getPlayer();
 
-        // OPEN GUI
         p.openInventory(PlayerSearchGUI.create());
     }
 }
